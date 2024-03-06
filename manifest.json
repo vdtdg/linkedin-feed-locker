@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Focus LinkedIn",
+    "version": "1.0",
+    "description": "Hides LinkedIn feed until the unlock button is pressed.",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.linkedin.com/*"],
+        "css": ["style.css"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ]
+  }
+  
