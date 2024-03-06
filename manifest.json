@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Focus LinkedIn",
+  "name": "LinkedIn Feed Locker",
   "version": "1.0.1",
   "description": "Hides LinkedIn feed until the unlock button is pressed.",
   "permissions": ["activeTab"],
@@ -12,7 +12,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "valerian+linkedin-extension@dtdg.fr"
+      "id": "linkedin-extension@valerian.dtdg.fr"
     }
   },
   "content_scripts": [
