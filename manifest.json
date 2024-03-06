@@ -10,6 +10,11 @@
     "128": "icons/128.png",
     "512": "icons/512.png"
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "valerian+linkedin-extension@dtdg.fr"
+    }
+  },
   "content_scripts": [
     {
       "matches": ["*://*.linkedin.com/*"],
