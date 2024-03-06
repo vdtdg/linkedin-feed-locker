@@ -12,7 +12,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "linkedin-extension@valerian.dtdg.fr"
+      "id": "linkedin-feed-locker@valerian.dtdg.fr"
     }
   },
   "content_scripts": [
