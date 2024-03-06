@@ -1,5 +1,5 @@
 # LinkedIn Feed Locker Browser Extension
-A Firefox extension to lock the LinkedIn feed from the view, helping distracted person to remain **focused** with the option of still accessing the feed.
+A browser extension to lock the LinkedIn feed from the view, helping distracted person to remain **focused** with the option of still accessing the feed.
 
 Example of what it looks like with the extension:
 ![The feed is locked and a button appears on top to unlock it](/docs/locked.png "The feed is locked and a button appears on top to unlock it")
