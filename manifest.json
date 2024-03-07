@@ -3,7 +3,7 @@
   "name": "LinkedIn Feed Locker",
   "version": "1.0.1",
   "description": "Hides LinkedIn feed until the unlock button is pressed.",
-  "permissions": ["activeTab"],
+  "permissions": [],
   "icons": {
     "16": "icons/16.png",
     "48": "icons/48.png",
