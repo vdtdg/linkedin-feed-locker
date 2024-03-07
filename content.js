@@ -66,17 +66,15 @@ function setupUnlockButton() {
 }
 
 function observePageChanges() {
-  let lastLocation = window.location.href;
   setInterval(() => {
-    let currentLocation = window.location.href;
-    if (lastLocation !== currentLocation) {
-      lastLocation = currentLocation;
-      if (currentLocation.includes("/feed")) {
+    if (window.location.href.includes("/feed")) {
+      const button = document.querySelector(buttonSelector);
+      if (!button) {
         setupUnlockButton();
       }
     }
-  }, 1000);
+  }, 500);
 }
 
-document.addEventListener("DOMContentLoaded", observePageChanges);
 document.addEventListener("DOMContentLoaded", setupUnlockButton);
+document.addEventListener("DOMContentLoaded", observePageChanges);
