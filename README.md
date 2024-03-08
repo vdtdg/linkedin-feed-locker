@@ -19,11 +19,18 @@ With this tool, your feed is locked by default, and you still have the opportuni
 
 
 # Install in 2 clicks
-By going here: (todo)
+<p align="center">
+<a href="https://addons.mozilla.org/en-US/firefox/addon/linkedin-feed-locker/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get Linkedin Feed Locker for Firefox"></a>
+<a href="https://chromewebstore.google.com/detail/linkedin-feed-locker/ekbageagichmpplpgnbonflcdhpaoall"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get Linkedin Feed Locker for Chromium"></a>
+</p>
 
 
 # Features
+- Free, no ads.
 - The feed is not unlocked immediately, adding another resistance to distraction.
 - Uses LinkedIn styles for nice visual integration.
-- Works in Dark Mode.
+- Works in Light and Dark modes.
 - Still works when navigating in LinkedIn back to the feed, not only on first launch.
+
+# Support
+If you encounter any problem, please raise an issue in this repository, I'll review it as soon as possible.
