@@ -7,7 +7,7 @@ Example of what it looks like with the extension:
 You can still press the button for 1.5 seconds to unlock the feed:
 ![A progress bar appears on click](/docs/unlocking.png "A progress bar appears on click")
 
-People who post on LinkedIn are getting better and better every day at catching your attention (and mine!). 
+People posting on LinkedIn are getting better and better every day at catching your attention (and mine!). 
 
 They post entrancing pictures and gripping hooks to get you to read their content. 
 
@@ -18,11 +18,9 @@ But you also have to protect your attention.
 With this tool, your feed is locked by default, and you still have the opportunity to read it by pressing the unlock button.
 
 
-# Install in 2 clicks
-<p align="center">
+# Installation
 <a href="https://addons.mozilla.org/en-US/firefox/addon/linkedin-feed-locker/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get Linkedin Feed Locker for Firefox"></a>
 <a href="https://chromewebstore.google.com/detail/linkedin-feed-locker/ekbageagichmpplpgnbonflcdhpaoall"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get Linkedin Feed Locker for Chromium"></a>
-</p>
 
 
 # Features
