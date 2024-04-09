@@ -35,7 +35,10 @@ function setupUnlockButton() {
     let pressTimer;
     let interval;
 
-    function startProgress() {
+    function startProgress(event) {
+      if (event.button === 1 || event.button === 2) { // right or middle click
+        return;
+      }
       button.textContent = "";
       button.appendChild(progress);
       progress.value = 0;
