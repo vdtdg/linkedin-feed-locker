@@ -2,7 +2,7 @@ const feedSelector = 'div[data-finite-scroll-hotkey-context="FEED"]';
 const feedFollowSelector = ".feed-follows-module";
 const buttonId = "unlock-button";
 const buttonSelector = `#${buttonId}`;
-const lockTime = 1500; // in milliseconds
+const lockTime = 2700; // in milliseconds
 
 function unlockFeed() {
   const feed = document.querySelector(feedSelector);
