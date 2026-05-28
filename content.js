@@ -1,4 +1,4 @@
-const feedSelector = 'div[data-finite-scroll-hotkey-context="FEED"]';
+const feedSelector = 'div[data-testid="mainFeed"], div[data-finite-scroll-hotkey-context="FEED"]';
 const feedFollowSelector = ".feed-follows-module";
 const loadButtonSelector = ".scaffold-finite-scroll__load-button";
 const buttonId = "unlock-button";
