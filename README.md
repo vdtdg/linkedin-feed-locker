@@ -4,7 +4,7 @@ A browser extension to lock the LinkedIn feed from the view, helping distracted 
 Example of what it looks like with the extension:
 ![The feed is locked and a button appears on top to unlock it](/docs/locked.png "The feed is locked and a button appears on top to unlock it")
 
-You can still press the button for 1.5 seconds to unlock the feed:
+You can still press the button for 2.7 seconds to unlock the feed:
 ![A progress bar appears on click](/docs/unlocking.png "A progress bar appears on click")
 
 People posting on LinkedIn are getting better and better every day at catching your attention (and mine!). 

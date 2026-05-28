@@ -1,20 +1,28 @@
 const feedSelector = 'div[data-finite-scroll-hotkey-context="FEED"]';
 const feedFollowSelector = ".feed-follows-module";
+const loadButtonSelector = ".scaffold-finite-scroll__load-button";
 const buttonId = "unlock-button";
 const buttonSelector = `#${buttonId}`;
 const lockTime = 2700; // in milliseconds
 
 function unlockFeed() {
-  const feed = document.querySelector(feedSelector);
-  const feedFollow = document.querySelector(feedFollowSelector);
   const button = document.querySelector(buttonSelector);
 
-  feed.style.visibility = "visible";
-  feedFollow.style.visibility = "visible";
-  button.style.display = "none";
+  document.querySelectorAll(`${feedSelector}, ${feedFollowSelector}, ${loadButtonSelector}`)
+    .forEach((element) => {
+      element.style.visibility = "visible";
+    });
+
+  if (button) {
+    button.style.display = "none";
+  }
 }
 
 function setupUnlockButton() {
+  if (!window.location.href.includes("/feed") || document.querySelector(buttonSelector)) {
+    return;
+  }
+
   const feed = document.querySelector(feedSelector);
 
   if (feed) {
@@ -32,10 +40,15 @@ function setupUnlockButton() {
     progress.setAttribute("max", "100");
     progress.setAttribute("value", "0");
 
-    let pressTimer;
     let interval;
 
     function startProgress(event) {
+      if (event.isPrimary === false) {
+        return;
+      }
+      if (interval) {
+        return;
+      }
       if (event.button === 1 || event.button === 2) { // right or middle click
         return;
       }
@@ -47,36 +60,35 @@ function setupUnlockButton() {
         if (progress.value >= 100) {
           unlockFeed();
           clearInterval(interval);
+          interval = undefined;
         }
       }, lockTime / 100);
     }
 
     function stopProgress() {
-      clearTimeout(pressTimer);
+      if (!interval) {
+        return;
+      }
+
       clearInterval(interval);
+      interval = undefined;
       button.textContent = "Feed locked. Press to unlock.";
       progress.value = 0;
     }
 
-    // Mouse based device
-    button.addEventListener("mousedown", startProgress);
-    document.addEventListener("mouseup", stopProgress);
-
-    // Touch based device
-    button.addEventListener("touchstart", startProgress);
-    document.addEventListener("touchend", stopProgress);
+    button.addEventListener("pointerdown", startProgress);
+    document.addEventListener("pointerup", stopProgress);
+    document.addEventListener("pointercancel", stopProgress);
   }
 }
 
 function observePageChanges() {
-  setInterval(() => {
-    if (window.location.href.includes("/feed")) {
-      const button = document.querySelector(buttonSelector);
-      if (!button) {
-        setupUnlockButton();
-      }
-    }
-  }, 500);
+  if (!document.body) {
+    return;
+  }
+
+  const observer = new MutationObserver(setupUnlockButton);
+  observer.observe(document.body, { childList: true, subtree: true });
 }
 
 document.addEventListener("DOMContentLoaded", setupUnlockButton);
